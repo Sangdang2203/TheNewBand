@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/image/favicon/theband.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="./assets/javaScript/style.js" defer></script>
@@ -13,27 +15,29 @@
 
 <body>
     <!-- Begin: Navigation Bar -->
-    <!-- Navbar for laptop -->
     <nav>
-        <ul class="nav-pc">
+        <ul class="nav-pc" id="header">
             <li>
                 <i class="fa fa-music"></i>
-                <a href="">&ensp;Home</a>
+                <a href="#">Home</a>
             </li>
-            <li><a href="">Band</a></li>
-            <li><a href="">Tour</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#band">Band</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
-                <a href="">More</a>
-                <i class="fa fa-angle-down"></i>
+                <a href="#">More</a>
+                <i class="fa fa-caret-down"></i>
                 <ul class="subNav">
-                    <li><a href="">Merchandise</a></li>
-                    <li><a href="">Extras</a></li>
-                    <li><a href="">Media</a></li>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Extras</a></li>
+                    <li><a href="#">Media</a></li>
                 </ul>
             </li>
             <div class="search-btn">
                 <i class="fa fa-search"></i>
+            </div>
+            <div class="nav-mobile-menu" id="mobileMenu">
+                <i class="fa fa-list"></i>
             </div>
         </ul>
     </nav>
@@ -41,7 +45,7 @@
 
     <!-- Begin: Slider -->
     <div class="slider">
-        <div class="text-content">
+        <div class="text-content text-center">
             <h2 class="text-heading">
                 New York
             </h2>
@@ -53,10 +57,10 @@
     <!-- End: Slider -->
 
     <!-- Begin: Band section -->
-    <section class="container">
+    <section id="band" class="container">
         <div class="content">
-            <h1 class="content-heading">THE BAND</h1>
-            <p class="content-desc"> We love music</p>
+            <h1 class="content-heading text-center">THE BAND</h1>
+            <p class="content-desc text-center"> We love music</p>
             <p class="content-detail">
                 We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -68,17 +72,17 @@
             </p>
         </div>
         <div class="member-list">
-            <div class="member">
+            <div class="member text-center">
                 <p class="member-name">Jonathan Dang</p>
                 <img src="./assets/image/bandMember.jpg" alt="Jonathan Dang">
             </div>
 
-            <div class="member">
+            <div class="member text-center">
                 <p class="member-name">Adward</p>
                 <img src="./assets/image/bandMember.jpg" alt="Adward">
             </div>
 
-            <div class="member">
+            <div class="member text-center">
                 <p class="member-name">Bobby</p>
                 <img src="./assets/image/bandMember.jpg" alt="Bobby">
             </div>
@@ -88,10 +92,10 @@
     <!-- End: Band section -->
 
     <!-- Begin: Tour section-->
-    <section class="tour-section">
+    <section id="tour" class="tour-section">
         <div class="container">
-            <h1 class="tour-Heading font-color">TOUR DATE</h1>
-            <p class="tour-subHeading font-color">Remember to book your tickets!</p>
+            <h1 class="tour-Heading font-color text-center">TOUR DATE</h1>
+            <p class="tour-subHeading font-color text-center">Remember to book your tickets!</p>
             <!-- Tickets -->
             <ul style="list-style: none;">
                 <li class="sticket-info">
@@ -137,57 +141,64 @@
     <!-- End: Band section -->
 
     <!-- Begin: Contact section -->
-    <section>
-        <h1 class="contact-heading">Contact</h1>
-        <p class="contact-subHeading">Fan?Drop a note!</p>
+    <section id="contact">
+        <h1 class="contact-heading text-center">Contact</h1>
+        <p class="contact-subHeading text-center">Fan?Drop a note!</p>
 
 
-        <div class="contact-section">
+        <div class="container">
             <!-- Address Information -->
             <div class="contact-info">
                 <p>
-                    <i class="fa fa-map-marker"></i>
+                    <i class="fa fa-map-marker"></i>&ensp;
                     Chicago, US
                 </p>
                 <p>
-                    <i class="fa fa-phone"></i>
+                    <i class="fa fa-facebook"></i>&ensp;
+                    Fanpage: theband
+                </p>
+                <p>
+                    <i class="fa fa-phone"></i>&ensp;
                     Phone: +00 151515
                 </p>
                 <p>
-                    <i class="fa fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>&ensp;
                     Email: theband@gmail.com
-                </p>
+                </p>    
             </div>
             <!-- Contact Form -->
-            <form action="#" class="contact-form" onsubmit="return checkContactForm ()">
-                <div>
-                    <input type="text" placeholder="Name" id="contactName">
-                </div>
-                <div>
-                    <input type="email" placeholder="Email" id="contactEmail">
-                </div>
-                <div>
-                    <input type="text" placeholder="Message" id="contactMessage">
-                </div>
-                <div>
-                    <button class="contact-btn font-color" type="submit">Send</button>
-                </div>
-            </form>
+            <div align="right">
+                <form action="#" class="contact-form" onsubmit="return checkContactForm ()">
+                    <div>
+                        <input type="text" placeholder="Name" id="contactName" required>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" id="contactEmail" required>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Message" id="contactMessage">
+                    </div>
+                    <div>
+                        <button class="contact-btn" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="contact-map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03604084876!2d-74.30932568065414!3d40.69753996827196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zVGjDoG5oIHBo4buRIE5ldyBZb3JrLCBUaeG7g3UgYmFuZyBOZXcgWW9yaywgSG9hIEvhu7M!5e0!3m2!1svi!2s!4v1682784257255!5m2!1svi!2s"
                 width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
     <!-- End: Contact section -->
 
     <footer class="footer" align="center">
-        <i class="fa fa-facebook-official"></i>
-        <i class="fa fa-linkedin-square"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-twitter-square"></i>
+        <a href=""><i class="fa fa-facebook-f"></i></a>
+        <a href=""><i class="fa fa-linkedin-square"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter-square"></i></a>
 
         <div align="center">
             <p>
@@ -214,8 +225,8 @@
                     <i class="fa fa-shopping-cart"></i>
                     Tickets, $15 per person
                 </label>
-                <input id="quantity" type="text" class="modal-input" placeholder="How many ?">
-                
+                <input id="quantity" type="text" class="modal-input" placeholder="How many tickets ?" required>
+
                 <label for="" class="modal-label">
                     <i class="fa fa-user"></i>
                     Send To
@@ -226,8 +237,8 @@
                     <i class="fa fa-phone"></i>
                     Phone
                 </label>
-                <input id="phone" type="text" class="modal-input" placeholder="Enter phone number">
-                
+                <input id="phone" type="tel" class="modal-input" placeholder="Enter phone number" required>
+
                 <button class="modal-btn" style="margin-left: 27%;" type="submit">Pay
                     <i class="fa fa-check"></i>
                 </button>
@@ -239,7 +250,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- End: Design Modal -->
 
 </body>

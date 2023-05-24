@@ -1,23 +1,25 @@
-const buyBtns = document.querySelectorAll('.js-buy-ticket')
-const modal = document.querySelector('.modal')
-const modalClose = document.querySelector('.modal-close-btn')
-const modalContainer = document.querySelector('.modal-container')
-//Show buyTicketModal
-function showBuyTicketModal() {
-    modal.classList.add('open')
+// Show - Hide BuyTicketModal
+var modal = document.querySelector ('.modal');
+var buyBtns = document.querySelectorAll ('.js-buy-ticket');
+var modalClose = document.querySelector ('.modal-close-btn');
+var modalContainer = document.querySelector ('.modal-container');
+// Show BuyTicketModal
+function showBuyTicketModal () {
+    modal.classList.add ('open');
 }
-for (const buyBtn of buyBtns) {
-    buyBtn.addEventListener('click', showBuyTicketModal)
+for (var buyBtn of buyBtns) {
+    buyBtn.addEventListener ('click', showBuyTicketModal);
 }
-//Hide buyTicketModal
-function hideBuyTicketModal() {
-    modal.classList.remove('open')
+//Hide BuyTicketModal
+function hideBuyTicketModal () {
+    modal.classList.remove ('open');
 }
-modalClose.addEventListener('click', hideBuyTicketModal)
-modal.addEventListener('click', hideBuyTicketModal)
-modalContainer.addEventListener('click', function (event) {
-    event.stopPropagation()
+modal.addEventListener ('click', hideBuyTicketModal);
+modalClose.addEventListener ('click', hideBuyTicketModal);
+modalContainer.addEventListener ('click', function (event) {
+    event.stopPropagation ();
 })
+
 
 //Notification message after the user has confirmed the buyTicketModal
 function checkModalForm() {
@@ -41,4 +43,33 @@ function checkContactForm() {
     message.push ("Email: " + sEmail);
     message.push ("Message: " + sMessage);
     alert (message.join ("\n"));
+}
+
+// Open - Close the mobile menu
+var header = document.getElementById ('header');
+var mobileMenu = document.getElementById ('mobileMenu');
+// mobileMenu.addEventListener ("click", function (event) {
+//     var isClosed = header.clientHeight === 50;
+//     if (isClosed) {
+//         header.style.height = "auto";
+//     } else {
+//         header.style.height = "50px";
+//     }
+// }) Or below option
+mobileMenu.onclick = function (event) {
+    var isClosed = header.clientHeight === 50;
+    if (isClosed) {
+        header.style.height = 'auto';
+    } else { 
+        header.style.height = '50px';
+    }
+}
+    // Automatically close the mobile menu when clicked in menuItem
+var menuItems = document.querySelectorAll ('.nav-pc li a[href*="#"]');
+for (var i = 0; i < menuItems.length; i++) {
+    var menuItem = menuItems[i];
+
+    menuItem.onclick = function () {
+        header.style.height = '50px';
+    }
 }

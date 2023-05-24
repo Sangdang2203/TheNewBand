@@ -1,0 +1,115 @@
+/* Responsive - Mobile*/
+@media (max-width: 740px) {
+
+    /* Begin : Mobile menu */
+    .nav-pc {
+        overflow: hidden;
+        height: auto;
+    }
+
+    .nav-pc > li {
+        display: block;
+    }
+
+    .nav-pc > li:first-child {
+        display: inline-block;
+    }
+
+    .nav-pc > li:first-child:hover {
+        background: #333;
+    }
+
+    .nav-pc > li:first-child a:hover {
+        color: goldenrod;
+    }
+
+    .nav-pc > li:first-child:hover {
+        color: goldenrod;
+    }
+
+    .nav-pc .fa-music {
+        display: none;
+    }
+
+    .nav-pc .search-btn {
+        display: none;
+    }
+
+    .nav-mobile-menu {
+        color: #fff;
+        font-size: 1.25rem;
+        position: absolute;
+        float: right;
+        top: 0;
+        right: 0;
+        padding: 12px;
+    }
+
+    .nav-mobile-menu:hover {
+        color: goldenrod;
+        background: #333;
+    }
+
+    .subNav {
+        position: inherit;
+        background: #ccc;
+    }
+
+    .subNav > li > a:hover {
+        color: goldenrod;
+    }
+
+
+    /* End : Mobile menu */
+
+    .member-list .member {
+        width: 100%;
+    }
+
+    .tour-info {
+        width: 100%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-form input {
+        width: 100%;
+    }
+
+    .contact-map iframe {
+        height: 350px;
+    }
+}
+
+/* Responsive - Tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .nav-mobile-menu {
+        display: none;
+    }
+
+    .tour-date {
+        font-size: 0.9rem
+    }
+
+    .tour-desc {
+        font-size: 0.7rem;
+    }
+
+    .contact-form input {
+        width: 80%;
+    }
+}
+
+/* Responsive - Laptop */
+@media (min-width: 1024px) {
+    .nav-mobile-menu {
+        display: none;
+    }
+}
