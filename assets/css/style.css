@@ -111,7 +111,8 @@ html {
 /* Begin : Slider */
 .slider {
     margin-top: 50px;
-    height: 690px;
+    margin-bottom: -55px;
+    height: auto;
     /* background: url('/assets/image/slider/chicago.jpg') top center / cover no-repeat; */
 }
 
@@ -265,12 +266,12 @@ html {
 }
 
 .tour-info img:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 .buy-ticket-btn {
-    margin: 8px 10px;
+    margin: 8px 0px;
     padding: 10px 10px;
     color: #fff;
     background-color: black;
