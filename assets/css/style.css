@@ -111,8 +111,8 @@ html {
 /* Begin : Slider */
 .slider {
     margin-top: 50px;
-    padding-top: 40%;
-    background: url('/assets/image/slider/chicago.jpg') top center / cover no-repeat;
+    height: 690px;
+    /* background: url('/assets/image/slider/chicago.jpg') top center / cover no-repeat; */
 }
 
 .text-content {
@@ -122,7 +122,7 @@ html {
     /* right: 0;
     left: 0; */
     width: 100%;
-    bottom: 30px;
+    bottom: 80px;
 }
 
 .text-heading {
