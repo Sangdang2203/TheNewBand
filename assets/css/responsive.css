@@ -1,7 +1,7 @@
 /* Table & Mobile: <= 1023px */
 @media (max-width: 63.9375em) {
     .nav-mobile-menu {
-        display: none;
+        display: block;
     }
 
     .tour-date {
