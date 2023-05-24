@@ -111,8 +111,7 @@ html {
 /* Begin : Slider */
 .slider {
     margin-top: 50px;
-    margin-bottom: -55px;
-    height: auto;
+    height: 690px;
     /* background: url('/assets/image/slider/chicago.jpg') top center / cover no-repeat; */
 }
 
